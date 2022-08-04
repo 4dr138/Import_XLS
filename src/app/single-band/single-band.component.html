@@ -1,0 +1,43 @@
+<form #bandForm="ngForm" *ngFor="let current_band of band | async" (ngSubmit)="updateBand(bandForm)">
+  <h3 style="margin-top: 5px;color: grey!important" class="text-center">Mise à jour des informations du groupe</h3>
+  <input type="hidden" name="id" [(ngModel)]="current_band.id">
+  <div class="form-group">
+    <label for="name">Nom du groupe</label>
+    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name" [(ngModel)]="current_band.name">
+  </div>
+  <div class="form-group">
+    <label for="origin">Origine</label>
+    <input type="text" class="form-control" id="origin" aria-describedby="emailHelp" name="origin"  [(ngModel)]="current_band.origin">
+  </div>
+  <div class="form-group">
+    <label for="city">Ville</label>
+    <input type="text" class="form-control" id="city" aria-describedby="emailHelp" name="city" [(ngModel)]="current_band.city">
+  </div>
+  <div class="form-group">
+    <label for="year_start">Année de création du groupe</label>
+    <input type="text" class="form-control" id="year_start" aria-describedby="emailHelp" name="year_start"  [(ngModel)]="current_band.year_start">
+  </div>
+  <div class="form-group">
+    <label for="year_end">Année de séparation</label>
+    <input type="text" class="form-control" id="year_end" aria-describedby="emailHelp" name="year_end" [(ngModel)]="current_band.year_end">
+  </div>
+  <div class="form-group">
+    <label for="creator">Fondateurs</label>
+    <input type="text" class="form-control" id="creator" aria-describedby="emailHelp" name="creator"  [(ngModel)]="current_band.creator">
+  </div>
+  <div class="form-group">
+    <label for="members">Membres</label>
+    <input type="text" class="form-control" id="members" aria-describedby="emailHelp" name="members" [(ngModel)]="current_band.members">
+  </div>
+  <div class="form-group">
+    <label for="style">Courant musical</label>
+    <input type="text" class="form-control" id="style" aria-describedby="emailHelp" name="style"  [(ngModel)]="current_band.style">
+  </div>
+  <div class="form-group">
+    <label for="presentation">Présentation</label>
+    <textarea class="form-control" id="presentation" name="presentation"  [(ngModel)]="current_band.presentation" >{{current_band.presentation}}</textarea>
+  </div>
+  <div class="form-group" style="text-align: center;">
+    <button class='btn btn-primary text-center' type="submit">Mettre à jour</button>
+  </div>
+</form>

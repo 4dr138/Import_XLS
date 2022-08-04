@@ -1,0 +1,22 @@
+<h3 class="text-center">Importer mes groupes musicaux préférés :(xls)</h3>
+<div class="text-center" style="display: flex">
+  <input class="form-control" type="file"
+         (change)="onChange($event)">
+
+  <button (click)="onUpload()"
+          class="btn btn-success">
+    Upload
+  </button>
+</div>
+
+<!--&lt;!&ndash; Shareable short link of uoloaded file &ndash;&gt;-->
+<!--<div class="container text-center jumbotron"-->
+<!--     *ngIf="shortLink">-->
+<!--  <h2> Visit Here</h2>-->
+<!--  <a href="{{shortLink}}">{{shortLink}}</a>-->
+<!--</div>-->
+
+<!--Flag variable is used here-->
+<div class="container" *ngIf="loading">
+  <h3>Loading ...</h3>
+</div>
